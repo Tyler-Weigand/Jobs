@@ -20,11 +20,10 @@ public class HiLoStress {
 
 		int[] payouts = new int[n+1];
 		//first two days
+		payouts[1] = low[1];
 		if (high[2] > low[1] + low[2]) {
-			payouts[1] = 0;
 			payouts[2] = high[2];
 		} else {
-			payouts[1] = low[1];
 			payouts[2] = low[1] + low[2];
 		}
 		for (int i=2; i<=n; i++) {

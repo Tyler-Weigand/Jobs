@@ -26,7 +26,7 @@ public class HiLoStress {
 		} else {
 			payouts[2] = low[1] + low[2];
 		}
-		for (int i=2; i<=n; i++) {
+		for (int i=3; i<=n; i++) {
 			int highRoute = high[i] + payouts[i-2];
 			int lowRoute = low[i] + payouts[i-1];
 			if (highRoute>lowRoute) {
